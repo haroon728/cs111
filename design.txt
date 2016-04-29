@@ -1,0 +1,24 @@
+There are three arrays of linked lists, idle, timeshare, and interactive
+What we want to do is add three more linked lists one for each and we'll call
+each the lottery que. 
+Pseudo code: 
+   When there is a context switch 
+      select a scheduler que
+      if standard que is not empty
+         run normal scheduler 
+      if standard que is empty 
+         run lottery scheduler 
+	    pick a number from set of Random numbers = rand
+	    r = rand%T
+	    sum = 0
+	    for each process in que
+	    	sum+= process_tickets 
+		if(sum>r) 
+		   run process
+   When process is added to que 
+      calculate T
+   When process is removed from que 
+      calculate T 
+   In infrequent scheduler 
+      calculate set of Random numbers 
+
